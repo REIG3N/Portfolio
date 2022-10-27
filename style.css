@@ -1,125 +1,210 @@
-*{
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    color: #D9D9D9;
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #D9D9D9;
 }
+
 /*----------------Navbar------------------*/
 /*Mobile*/
-.navbar{
-    display: grid;
-    grid-template-columns: 3;
-    grid-template-rows: 3;
-    padding: 40px;
-    height: 30px;
-    align-items: center;
-    background-color: #29292D;
-
+.navbar {
+  display: grid;
+  grid-template-columns: 3;
+  grid-template-rows: 3;
+  padding: 40px;
+  height: 30px;
+  align-items: center;
+  background-color: #29292D;
 }
 
-a:nth-of-type(1){
-    grid-column: 1/1;
-    text-align: center;
-    width: auto;
-    color: white;
-
+a:nth-of-type(1) {
+  grid-column: 1/1;
+  text-align: center;
+  width: auto;
+  color: white;
 }
-a:nth-of-type(2){
-    grid-column: 2/2;
-    text-align: center;
-    width: auto;
-    color: white;
 
-
+a:nth-of-type(2) {
+  grid-column: 2/2;
+  text-align: center;
+  width: auto;
+  color: white;
 }
-a:nth-of-type(3){
-    grid-column: 3/3;
-    text-align: center;
-    width: auto;
-    color: white;
 
+a:nth-of-type(3) {
+  grid-column: 3/3;
+  text-align: center;
+  width: auto;
+  color: white;
 }
 
 /*Desktop*/
-@media screen and (min-width: 768px) {    
-    .navbar{
-        display: grid;
-        grid-template-columns: 3;
-        grid-template-rows: 3;
-    }
-    
-    a:nth-of-type(1){
-        width: auto;
-    }
-    a:nth-of-type(2){
-        width: auto;
-    }
-    a:nth-of-type(3){
-        width: auto;
-    }
+@media screen and (min-width: 768px) {
+  .navbar {
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-rows: 3;
+  }
+  a:nth-of-type(1) {
+    width: auto;
+  }
+  a:nth-of-type(2) {
+    width: auto;
+  }
+  a:nth-of-type(3) {
+    width: auto;
+  }
 }
 /*---------------- Etoiles   ------------------*/
 /*Mobile*/
 /*Desktop*/
-@media screen and (min-width: 768px) {    
-.backgroundScreen{
+@media screen and (min-width: 768px) {
+  .backgroundScreen {
     height: auto;
-    width:auto;
-}
-.star1{
+    width: auto;
+  }
+  .star1 {
     background-color: #D9D9D9;
     height: 3px;
     width: 3px;
     border-radius: 50%;
-}
-.star2{
+  }
+  .star2 {
     background-color: #D9D9D9;
     height: 5px;
     width: 5px;
     border-radius: 50%;
-}
-.star3{
+  }
+  .star3 {
     background-color: #D9D9D9;
     height: 7px;
     width: 7px;
     border-radius: 50%;
+  }
 }
-}
-
-
 /*----------------  PAGE PROJETS  ------------------*/
-
 /*----------------  TitreSecondaires  ------------------*/
 /*Mobile*/
-.secondTitle h1{
+.secondTitle h1 {
+  background-color: #29292D;
+  text-align: center;
+  padding: 40px;
+  padding-bottom: 100px;
+}
+
+/*Desktop*/
+@media screen and (min-width: 768px) {
+  .secondTitle h1 {
     background-color: #29292D;
     text-align: center;
     padding: 40px;
     padding-bottom: 100px;
+  }
 }
+/*----------------  Espace Paralax??? entre les projets  ------------------*/
+.space {
+  height: 17vh;
+}
+
+/*Mobile*/
 /*Desktop*/
-@media screen and (min-width: 768px) {   
-    .secondTitle h1{
-        background-color: #29292D;
-        text-align: center;
-        padding: 40px;
-        padding-bottom: 100px;
-    }
+/*----------------  Template de présentation de Projet  ------------------*/
+/*Desktop*/
+.projectBox {
+  background-color: #29292D;
 }
+
+.projectBloc {
+  margin-bottom: 20px;
+  /*Mobile*/
+}
+@media screen and (min-width: 769px) {
+  .projectBloc {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20% 60% 20%;
+  }
+  .projectBloc h2 {
+    text-align: center;
+    border-radius: 30px;
+    border: transparent;
+    background-color: #D9D9D9;
+    color: #EC7357;
+    margin: 20px;
+    grid-column: 1/3;
+    height: 30px;
+  }
+  .projectBloc p {
+    margin: 20px;
+    color: #D9D9D9;
+  }
+  .projectBloc img {
+    margin-bottom: 20px;
+    object-fit: cover;
+    width: 45vw;
+    height: 50vh;
+  }
+  .projectBloc a:link {
+    text-decoration: none;
+  }
+  .projectBloc button {
+    height: 60px;
+    width: 30vw;
+    border-radius: 30px;
+    border: transparent;
+    margin-left: 20%;
+    text-decoration: none;
+    background-color: #EC7357;
+  }
+  .projectBloc .sticky {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .projectBloc {
+    text-align: center;
+    align-items: center;
+    padding: 15px;
+  }
+  .projectBloc .sticky {
+    height: 1px;
+    width: 1px;
+  }
+  .projectBloc h2 {
+    background-color: #D9D9D9;
+    border-radius: 30px;
+    border: transparent;
+    color: #EC7357;
+    margin: 20px;
+  }
+  .projectBloc p {
+    margin: 20px;
+    color: #D9D9D9;
+  }
+  .projectBloc img {
+    margin-bottom: 20px;
+    object-fit: cover;
+    width: 85vw;
+    height: 50vh;
+  }
+  .projectBloc button {
+    height: 60px;
+    width: 85vw;
+    border-radius: 30px;
+    border: transparent;
+    grid-column: 2/2;
+    background-color: #EC7357;
+    color: #D9D9D9;
+  }
+  .projectBloc a:link {
+    text-decoration: none;
+    color: #D9D9D9;
+  }
+}
+
 /*----------------    ------------------*/
 /*Mobile*/
 /*Desktop*/
 
-/*----------------    ------------------*/
-/*Mobile*/
-/*Desktop*/
-
-
-
-
-
-
-
-
-
-
+/*# sourceMappingURL=style.css.map */
