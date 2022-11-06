@@ -2,148 +2,143 @@
 * {
   margin: 0;
   padding: 0;
-  text-decoration: none;
   box-sizing: border-box;
   color: #D9D9D9;
+  font-family: "Josefin Sans", sans-serif;
 }
 
-/*----------------Navbar------------------*/
-/*Mobile*/
-.navbar {
+.sticky {
+  height: 20px;
+}
+
+body {
+  min-height: 100vh;
   display: grid;
-  grid-template-columns: 3;
-  grid-template-rows: 3;
-  padding: 30px;
-  height: 30px;
-  width: 100vw;
-  align-items: center;
-  background-color: #29292D;
-  position: sticky;
+  place-items: center;
+  background-image: url(./img/StarBackground.png);
+  background-color: #292929;
 }
 
-a:nth-of-type(1) {
-  grid-column: 1/1;
-  text-align: center;
-  width: auto;
-  color: white;
+.slide-wrapper {
+  width: 80%;
+  height: 650px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
 }
 
-a:nth-of-type(2) {
-  grid-column: 2/2;
-  text-align: center;
-  width: auto;
-  color: white;
+input {
+  visibility: hidden;
+  opacity: 0;
 }
 
-a:nth-of-type(3) {
-  grid-column: 3/3;
-  text-align: center;
-  width: auto;
-  color: white;
+label {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: block;
+  width: 12px;
+  height: 42px;
+  cursor: pointer;
+  background: #EC7357;
+  transition: 0.4;
+  border: 2px solid rgba(255, 255, 255, 0.5);
 }
 
-/*Desktop*/
-@media screen and (min-width: 768px) {
-  .navbar {
-    display: grid;
-    grid-template-columns: 3;
-    grid-template-rows: 3;
-  }
-  a:nth-of-type(1) {
-    width: auto;
-  }
-  a:nth-of-type(2) {
-    width: auto;
-  }
-  a:nth-of-type(3) {
-    width: auto;
-  }
+label[for=slider2] {
+  margin-top: 50px;
 }
-/*---------------- Etoiles   ------------------*/
-/*Mobile*/
-/*Desktop*/
-@media screen and (min-width: 768px) {
-  .backgroundScreen {
-    height: auto;
-    width: auto;
-  }
-  .star1 {
-    background-color: #D9D9D9;
-    height: 3px;
-    width: 3px;
-    border-radius: 50%;
-  }
-  .star2 {
-    background-color: #D9D9D9;
-    height: 5px;
-    width: 5px;
-    border-radius: 50%;
-  }
-  .star3 {
-    background-color: #D9D9D9;
-    height: 7px;
-    width: 7px;
-    border-radius: 50%;
-  }
-  /*---------------- LUNE & NUAGES   ------------------*/
+
+label[for=slider3] {
+  margin-top: 100px;
 }
-.mainText {
+
+input:checked + label, label:hover {
+  background: #fff;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateY(-100%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  transition-duration: 0.6s;
+  opacity: 1;
+  transform-origin: 50% 50%;
+}
+
+input:checked + .slide {
+  transform: translateY(100%);
+}
+
+input:checked + label + .slide {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.slide1 {
+  /*------------------ LUNE ------------------*/
+  /*------------------ PREMIER NUAGE ------------------*/
+  /* ------------------  SECOND NUAGE  ------------------*/
+}
+.slide1 .mainText {
   z-index: 7;
   position: absolute;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(41, 41, 45, 0);
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
-
-.title {
+.slide1 .title {
   color: #EC7357;
   text-align: center;
 }
-.title h1 {
+.slide1 .title h1 {
   font-size: 50px;
   color: #EC7357;
 }
-.title p {
+.slide1 .title p {
   text-align: center;
   color: #EC7357;
 }
-
-.canvas {
+.slide1 .canvas {
   position: absolute;
   height: 100vh;
   width: 100vw;
-  background-color: #29292D;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
-
-/*------------------ LUNE ------------------*/
-.moon {
+.slide1 .moon {
   height: 500px;
   width: 500px;
   background-color: #D9D9D9;
   border-radius: 375px;
   z-index: 2;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 @media screen and (max-width: 768px) {
-  .moon {
+  .slide1 .moon {
     height: 350px;
     width: 350px;
   }
 }
 @media screen and (max-width: 520px) {
-  .moon {
+  .slide1 .moon {
     height: 250px;
     width: 250px;
   }
 }
-
-/*------------------ PREMIER NUAGE ------------------*/
-.cloud1Part1 {
+.slide1 .cloud1Part1 {
   z-index: 2;
   position: absolute;
   background-color: #636366;
@@ -154,22 +149,21 @@ a:nth-of-type(3) {
   margin-left: 500px;
 }
 @media screen and (max-width: 768px) {
-  .cloud1Part1 {
+  .slide1 .cloud1Part1 {
     height: 80px;
     width: 80px;
     margin-left: 350px;
   }
 }
 @media screen and (max-width: 520px) {
-  .cloud1Part1 {
+  .slide1 .cloud1Part1 {
     height: 50px;
     width: 50px;
     margin-left: 200px;
     margin-bottom: 130px;
   }
 }
-
-.cloud1Part2 {
+.slide1 .cloud1Part2 {
   z-index: 2;
   position: absolute;
   background-color: #636366;
@@ -182,21 +176,20 @@ a:nth-of-type(3) {
   margin-left: 500px;
 }
 @media screen and (max-width: 768px) {
-  .cloud1Part2 {
+  .slide1 .cloud1Part2 {
     height: 80px;
     width: 80px;
     margin-left: 350px;
   }
 }
 @media screen and (max-width: 520px) {
-  .cloud1Part2 {
+  .slide1 .cloud1Part2 {
     height: 50px;
     width: 50px;
     margin-left: 175px;
   }
 }
-
-.cloud1Part3 {
+.slide1 .cloud1Part3 {
   z-index: 2;
   position: absolute;
   background-color: #636366;
@@ -209,22 +202,21 @@ a:nth-of-type(3) {
   margin-left: 500px;
 }
 @media screen and (max-width: 768px) {
-  .cloud1Part3 {
+  .slide1 .cloud1Part3 {
     height: 80px;
     width: 80px;
     margin-left: 350px;
   }
 }
 @media screen and (max-width: 520px) {
-  .cloud1Part3 {
+  .slide1 .cloud1Part3 {
     height: 50px;
     width: 50px;
     margin-left: 215px;
     margin-bottom: 150px;
   }
 }
-
-.cloud1Part4 {
+.slide1 .cloud1Part4 {
   z-index: 2;
   position: absolute;
   background-color: #636366;
@@ -236,21 +228,20 @@ a:nth-of-type(3) {
   margin-left: 500px;
 }
 @media screen and (max-width: 768px) {
-  .cloud1Part4 {
+  .slide1 .cloud1Part4 {
     height: 80px;
     width: 80px;
     margin-left: 250px;
   }
 }
 @media screen and (max-width: 520px) {
-  .cloud1Part4 {
+  .slide1 .cloud1Part4 {
     height: 50px;
     width: 50px;
     margin-left: 200px;
   }
 }
-
-.cloud1Part5 {
+.slide1 .cloud1Part5 {
   z-index: 2;
   position: absolute;
   background-color: #636366;
@@ -263,21 +254,20 @@ a:nth-of-type(3) {
   margin-left: 500px;
 }
 @media screen and (max-width: 768px) {
-  .cloud1Part5 {
+  .slide1 .cloud1Part5 {
     height: 80px;
     width: 80px;
     margin-left: 350px;
   }
 }
 @media screen and (max-width: 520px) {
-  .cloud1Part5 {
+  .slide1 .cloud1Part5 {
     height: 50px;
     width: 50px;
     margin-left: 219px;
   }
 }
-
-.cloud1Bottom {
+.slide1 .cloud1Bottom {
   z-index: 2;
   position: absolute;
   background-color: #636366;
@@ -288,25 +278,24 @@ a:nth-of-type(3) {
   margin-right: 45px;
   margin-bottom: 150px;
   margin-left: 500px;
+  box-shadow: 0px 10px 18px black;
 }
 @media screen and (max-width: 768px) {
-  .cloud1Bottom {
+  .slide1 .cloud1Bottom {
     height: 40px;
     width: 160px;
     margin-left: 350px;
   }
 }
 @media screen and (max-width: 520px) {
-  .cloud1Bottom {
+  .slide1 .cloud1Bottom {
     height: 30px;
     width: 130px;
     margin-bottom: 169px;
     margin-left: 200px;
   }
 }
-
-/* ------------------  SECOND NUAGE  ------------------*/
-.cloud2Part1 {
+.slide1 .cloud2Part1 {
   z-index: 2;
   position: absolute;
   background-color: #636366;
@@ -318,22 +307,21 @@ a:nth-of-type(3) {
   margin-top: 100px;
 }
 @media screen and (max-width: 768px) {
-  .cloud2Part1 {
+  .slide1 .cloud2Part1 {
     height: 80px;
     width: 80px;
     margin-right: 255px;
   }
 }
 @media screen and (max-width: 520px) {
-  .cloud2Part1 {
+  .slide1 .cloud2Part1 {
     height: 50px;
     width: 50px;
     margin-right: 195px;
     margin-top: 120px;
   }
 }
-
-.cloud2Part2 {
+.slide1 .cloud2Part2 {
   z-index: 2;
   position: absolute;
   background-color: #636366;
@@ -345,22 +333,21 @@ a:nth-of-type(3) {
   margin-right: 405px;
 }
 @media screen and (max-width: 768px) {
-  .cloud2Part2 {
+  .slide1 .cloud2Part2 {
     height: 80px;
     width: 80px;
     margin-right: 255px;
   }
 }
 @media screen and (max-width: 520px) {
-  .cloud2Part2 {
+  .slide1 .cloud2Part2 {
     height: 50px;
     width: 50px;
     margin-right: 130px;
     margin-top: 153px;
   }
 }
-
-.cloud2Part3 {
+.slide1 .cloud2Part3 {
   z-index: 2;
   position: absolute;
   background-color: #636366;
@@ -371,22 +358,21 @@ a:nth-of-type(3) {
   margin-right: 505px;
 }
 @media screen and (max-width: 768px) {
-  .cloud2Part3 {
+  .slide1 .cloud2Part3 {
     height: 80px;
     width: 80px;
     margin-right: 355px;
   }
 }
 @media screen and (max-width: 520px) {
-  .cloud2Part3 {
+  .slide1 .cloud2Part3 {
     height: 50px;
     width: 50px;
     margin-right: 110px;
     margin-top: 110px;
   }
 }
-
-.cloud2Part4 {
+.slide1 .cloud2Part4 {
   z-index: 2;
   position: absolute;
   background-color: #636366;
@@ -397,22 +383,21 @@ a:nth-of-type(3) {
   margin-right: 405px;
 }
 @media screen and (max-width: 768px) {
-  .cloud2Part4 {
+  .slide1 .cloud2Part4 {
     height: 80px;
     width: 80px;
     margin-right: 255px;
   }
 }
 @media screen and (max-width: 520px) {
-  .cloud2Part4 {
+  .slide1 .cloud2Part4 {
     height: 50px;
     width: 50px;
     margin-right: 155px;
     margin-top: 140px;
   }
 }
-
-.cloud2Part5 {
+.slide1 .cloud2Part5 {
   z-index: 2;
   position: absolute;
   background-color: #636366;
@@ -423,22 +408,21 @@ a:nth-of-type(3) {
   margin-right: 585px;
 }
 @media screen and (max-width: 768px) {
-  .cloud2Part5 {
+  .slide1 .cloud2Part5 {
     height: 80px;
     width: 80px;
     margin-right: 435px;
   }
 }
 @media screen and (max-width: 520px) {
-  .cloud2Part5 {
+  .slide1 .cloud2Part5 {
     height: 50px;
     width: 50px;
     margin-right: 250px;
     margin-top: 150px;
   }
 }
-
-.cloud2Bottom {
+.slide1 .cloud2Bottom {
   z-index: 2;
   position: absolute;
   background-color: #636366;
@@ -447,9 +431,10 @@ a:nth-of-type(3) {
   border-radius: 500px;
   margin-top: 210px;
   margin-right: 450px;
+  box-shadow: 0px 10px 18px black;
 }
 @media screen and (max-width: 768px) {
-  .cloud2Bottom {
+  .slide1 .cloud2Bottom {
     height: 80px;
     width: 200px;
     margin-right: 300px;
@@ -457,10 +442,215 @@ a:nth-of-type(3) {
   }
 }
 @media screen and (max-width: 520px) {
-  .cloud2Bottom {
+  .slide1 .cloud2Bottom {
     height: 30px;
     width: 130px;
     margin-right: 155px;
+  }
+}
+
+.slide2 {
+  /*----------------------------*/
+}
+.slide2 .stickyPres {
+  height: 20px;
+}
+@media screen and (max-width: 767px) {
+  .slide2 .stickyPres {
+    height: 8px;
+  }
+}
+.slide2 .presSlide {
+  display: flex;
+  justify-content: center;
+  margin-top: 15vh;
+  align-items: center;
+  text-align: center;
+}
+.slide2 .presBox {
+  background-color: #636366;
+  height: 70vh;
+  width: 80vw;
+  border-radius: 90px;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 50% 50%;
+}
+@media screen and (max-width: 767px) {
+  .slide2 .presBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.slide2 .presText {
+  grid-row: 1/1;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  border-radius: 90px;
+  height: 30vh;
+  width: 40vw;
+  background-color: #EC7357;
+}
+.slide2 .presText p {
+  text-overflow: ellipsis;
+}
+@media screen and (max-width: 767px) {
+  .slide2 .presText {
+    height: 90vh;
+    width: 70vw;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 424px) {
+  .slide2 .presText {
+    height: 30vh;
+    width: 90%;
+    margin-top: 20px;
+    font-size: 12px;
+  }
+}
+.slide2 .presSkills {
+  margin: auto;
+  grid-row: 2/2;
+  border-radius: 90px;
+  height: 30vh;
+  width: 40vw;
+  background-color: #EC7357;
+  align-items: center;
+  text-align: center;
+}
+.slide2 .presSkills h2 {
+  margin-top: 5px;
+}
+.slide2 .presSkills img {
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+  border-radius: 90px;
+}
+@media screen and (max-width: 767px) {
+  .slide2 .presSkills {
+    height: 80vh;
+    width: 70vw;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 424px) {
+  .slide2 .presSkills {
+    height: 30vh;
+    width: 90%;
+    margin-top: 20px;
+    font-size: 12px;
+  }
+}
+.slide2 .presImage {
+  grid-column: 2;
+  grid-column-start: 2;
+  grid-row-end: 1;
+  grid-row-end: 2;
+  border-radius: 90px;
+  margin: auto;
+  object-fit: cover;
+  height: 60vh;
+  width: 100%;
+}
+.slide2 .presImage img {
+  margin-top: 20px;
+  object-fit: cover;
+  height: 65vh;
+  width: 25vw;
+  overflow: hidden;
+  border-radius: 90px;
+}
+@media screen and (max-width: 767px) {
+  .slide2 .presImage {
+    display: block;
+    object-fit: none;
+  }
+  .slide2 .presImage img {
+    height: 20vh;
+    width: 80%;
+    overflow: hidden;
+    border-radius: 90px;
+  }
+}
+@media screen and (max-width: 424px) {
+  .slide2 .presImage {
+    display: block;
+    object-fit: none;
+  }
+  .slide2 .presImage img {
+    height: 25vh;
+    width: 80%;
+    overflow: hidden;
+    border-radius: 90px;
+  }
+}
+
+.slide3 .stickyPres {
+  height: 20px;
+}
+@media screen and (max-width: 767px) {
+  .slide3 .stickyPres {
+    height: 8px;
+  }
+}
+.slide3 .presSlide {
+  display: flex;
+  justify-content: center;
+  margin-top: 15vh;
+  align-items: center;
+  text-align: center;
+}
+.slide3 .presBox {
+  background-color: #EC7357;
+  height: 70vh;
+  width: 80vw;
+  border-radius: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .slide3 .presBox {
+    height: 50vh;
+    width: 80vw;
+  }
+}
+.slide3 .presBox a {
+  text-decoration: none;
+}
+.slide3 .presBox h2 {
+  margin: auto;
+  font-size: 100px;
+}
+.slide3 .presBox button {
+  border-radius: 90px;
+  margin: auto;
+  background-color: #636366;
+  cursor: pointer;
+  height: 200px;
+  width: 400px;
+  box-shadow: inset 0 0 0 0 #292929;
+  transition: ease-out 0.3s;
+  outline: none;
+}
+.slide3 .presBox button button:hover {
+  box-shadow: inset 300px 0 0 0 #292929;
+  cursor: pointer;
+  color: #D9D9D9;
+}
+@media screen and (max-width: 767px) {
+  .slide3 .presBox button {
+    margin: auto;
+    height: 100px;
+    width: 200px;
+  }
+  .slide3 .presBox h2 {
+    margin: auto;
+    font-size: 50px;
   }
 }
 
@@ -483,7 +673,6 @@ a:nth-of-type(3) {
     padding-bottom: 100px;
   }
 }
-/*----------------  Espace Paralax??? entre les projets  ------------------*/
 .space {
   height: 17vh;
 }
@@ -583,9 +772,5 @@ a:nth-of-type(3) {
     color: #D9D9D9;
   }
 }
-
-/*----------------    ------------------*/
-/*Mobile*/
-/*Desktop*/
 
 /*# sourceMappingURL=style.css.map */

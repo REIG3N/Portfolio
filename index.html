@@ -1,29 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PITIE</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>   
-    <title>BARDAT Ryan</title>
 </head>
-
 <body>
-    <div class="backgroundScreen">
+<main>
+    <div class="slide-wrapper"></div>
 
-    <!-- -------------------Barre de navigation------------------------------->
-    <header>
-            <ul class="navbar">
-                <a href="index.html">Accueil</a>
-                <a href="projets.html">Projets</a>
-                <a href="presentation.html">Présentation</a>
-            </ul>   
-    </header>
-    <main>
-
-
+    <input type="radio" name="slider" id="slider1" checked>
+    <label for="slider1"></label>
+    <div class="slide slide1">
         <section class="mainText">
             <div class="title">
                 <h1>MON PORTFOLIO</h1>
@@ -46,27 +36,64 @@
             <div class="cloud2Part4"></div>
             <div class="cloud2Part5"></div>
         </div>
-    
-    
-
-<!-- FJEGJEJJ -->
-
-
-<!-- FJEGJEJJ -->
-<!-- FJEGJEJJ -->
-
-
-
-
-
-
-
-
-
-
-
-        
     </div>
-    </main>
+
+    <input type="radio" name="slider" id="slider2">
+    <label for="slider2"></label>
+    <div class="slide slide2">
+        <div class="presSlide">
+            <div class="presBox">
+
+                <div class="presText">
+                    <div class="stickyPres"></div>
+                    <h2>Qui suis-je ?</h2>
+                    <div class="stickyPres"></div>
+                    <p>
+                        J'ai commencé la programmation au lycée, <br>
+                        principalement avec Python et un peu SQL.<br>
+                        Aujourd'hui ,étudiant à l'IIM, je me forme <br>
+                        dans l'axe Coding & Digital Innovation,<br>
+                        dans le but de devenir developpeur web.<br>
+                    </p>
+                </div>
+
+                <div class="presSkills">
+                    <div class="stickyPres"></div>
+                    <h2>Skills</h2>
+                    <p>Je maitrise les languages suivants:</p>
+                    <div class="stickyPres"></div>
+                    <img src="img/html.png" alt="">
+                    <img src="img/css.png" alt="">
+                    <img src="img/js.png" alt="">
+                    <img src="img/php.png" alt="">
+                    <img src="img/sql.jpg" alt="">
+                    <img src="img/python.png" alt="">
+                    <div class="stickyPres"></div>
+                </div>
+
+                <div class="presImage">
+                    <img src="img/PhotoProProfile.jpg" alt="">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <input type="radio" name="slider" id="slider3">
+    <label for="slider3"></label>
+    <div class="slide slide3">
+        <div class="presSlide">
+            <div class="presBox">
+                    <h2>Mes Projets</h2>
+                    <button><a href="projets.html">Voir plus</a></button>
+            </div>
+        </div>
+        
+
+    </div>
+
+
+
+</main>
 </body>
 </html>
