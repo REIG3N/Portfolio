@@ -47,7 +47,6 @@ label {
   height: 42px;
   cursor: pointer;
   background: #EC7357;
-  transition: 0.4;
   border: 2px solid rgba(255, 255, 255, 0.5);
 }
 
@@ -532,7 +531,6 @@ input:checked + label + .slide {
   height: 50px;
   width: 50px;
   overflow: hidden;
-  border-radius: 90px;
 }
 @media screen and (max-width: 767px) {
   .slide2 .presSkills {
