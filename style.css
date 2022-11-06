@@ -621,6 +621,7 @@ input:checked + label + .slide {
 }
 .slide3 .presBox a {
   text-decoration: none;
+  cursor: pointer;
 }
 .slide3 .presBox h2 {
   margin: auto;
@@ -647,6 +648,7 @@ input:checked + label + .slide {
     margin: auto;
     height: 100px;
     width: 200px;
+    z-index: 555;
   }
   .slide3 .presBox h2 {
     margin: auto;
@@ -771,6 +773,50 @@ input:checked + label + .slide {
     text-decoration: none;
     color: #D9D9D9;
   }
+}
+
+.btnLink {
+  display: inline-block;
+  background-color: #EC7357;
+  border-radius: 10px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.btnLink span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btnLink span:after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btnLink:hover {
+  background-color: #ecb0a3;
+}
+
+.btnLink:hover span {
+  padding-right: 25px;
+}
+
+.btnLink:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
