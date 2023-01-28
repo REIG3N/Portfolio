@@ -1,103 +1,272 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta name="description" content="Voici le portfolio de BARDAT Ryan. J'y ajouterais,
-    au fur et à mesure, mes projets que je vais effectuer en developpement web, front-end, back-end, etc">
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BARDAT Ryan</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
+    <title>Bardat Ryan</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
-<body>
-<main>
-    <div class="slide-wrapper"></div>
+<body class="bg-[#0C1734] bg-[url('assets/StarBackground.png')]" >
 
-    <input type="radio" name="slider" id="slider1" checked>
-    <label for="slider1"></label>
-    <div class="slide slide1">
-        <section class="mainText">
-            <div class="title">
-                <h1>MON PORTFOLIO</h1>
-                <p>BARDAT Ryan</p>
+<nav class="p-5 shadow md:flex md:items-center md:justify-between ">
+    <div class="flex justify-between items-center ">
+
+
+        <span class="text-3xl cursor-pointer mx-2 md:hidden block ">
+        <ion-icon name="menu" class="bg-cyan-400" onclick="Menu(this)"></ion-icon>
+      </span>
+    </div>
+
+    <ul class="md:flex md:items-center z-[1] md:z-auto md:static absolute  w-full left-0  md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 max-md:bg-white">
+        <li class="mx-4 my-6 md:my-0">
+            <a href="#" class="text-xl text-cyan-400 hover:text-white duration-500 max-md:hover:text-black ">HOME</a>
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+            <a href="#" class="text-xl text-cyan-400 hover:text-white duration-500 max-md:hover:text-black">SKILLS</a>
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+            <a href="#" class="text-xl text-cyan-400 hover:text-white duration-500 max-md:hover:text-black">PROJECTS</a>
+        </li>
+    </ul>
+</nav>
+
+
+<script>
+    function Menu(e){
+        let list = document.querySelector('ul');
+        e.name === 'menu' ? (e.name = "close",list.classList.add('top-[80px]') , list.classList.add('opacity-100')) :( e.name = "menu" ,list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))
+    }
+</script>
+
+<div id="presContainer" class="flex justify-center mt-[30px]">
+    <div class=" w-[1100px] h-[550px] flex  justify-between max-[800px]:flex-col max-[800px]:w-full max-[800px]:justify-center">
+
+        <div id="presText" class=" w-[400px] h-full font-bold text-white flex flex-col justify-between max-[800px]:justify-start  max-[800px]:w-full max-[800px]:justify-center">
+            <div id="presTextPart1" class="">
+                <h1 class="text-[50px] font-bold text-white max-[800px]:ml-10 ">
+                    BARDAT Ryan
+                </h1>
+                <h3 class="text-[25px]  max-[800px]:ml-10 text-cyan-400 ">
+                    Developpeur Web
+                </h3>
             </div>
-        </section>
-    
-        <div class="canvas">
-            <div class="moon"></div>
-            <div class="cloud1Bottom"></div>
-            <div class="cloud1Part1"></div>
-            <div class="cloud1Part2"></div>
-            <div class="cloud1Part3"></div>
-            <div class="cloud1Part4"></div>
-            <div class="cloud1Part5"></div>
-            <div class="cloud2Bottom"></div>
-            <div class="cloud2Part1"></div>
-            <div class="cloud2Part2"></div>
-            <div class="cloud2Part3"></div>
-            <div class="cloud2Part4"></div>
-            <div class="cloud2Part5"></div>
+            <div id="presTextPart2" class=" ml-[50px] mb-[50px]  max-[800px]:mr-[50px] ">
+                <h3 class="text-[20px] mb-4">
+                    Qui suis-je ?
+                </h3>
+                <p class="text-[15px]">
+                    Je m'intéresse à la programation depuis le lycée. Aujourd'hui, j'étudie à l'IIM, dans l'axe Coding & Digitale Innovation dans le but de devenir developpeur web, notamment front-end.
+                </p>
+            </div>
+        </div>
+        <div id="presImage" class="w-[400px] h-full flex justify-center align-center overflow-hidden max-[800px]:justify-center max-[800px]:w-full rounded-xl ">
+            <img src="assets/PhotoProProfile.jpg" alt="Photo de profile" class="rounded-xl">
+        </div>
+    </div>
+</div>
+
+<div class="h-32"></div>
+
+<div id="skillsContainer" class="bg-neutral-900 w-full h-[500px] ">
+        <h3 class="flex justify-center text-[25px] font-bold text-white pt-8 pb-6 ">Mes Compétences</h3>
+
+
+    <div id="skillsBox" class=" flex flex-wrap h-96 flex justify-center items-center max-[790px]:mb-10 max-[639px]:mb-20">
+
+        <div id="skillBox1" class="mr-6 ml-6 mb-8 max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:mr-3 max-[512px]:ml-3 max-[512px]:mb-4 max-[311px]:mr-1 max-[311px]:ml-1 max-[311px]:mb-3 ">
+            <div id="skillImgBox1" class="w-[110px] h-[110px] mb-2 flex justify-center items-center max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+                <img src="assets/icons8-html-5-96.png" alt="logo HTML" class="w-[110px] h-[110px] max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+            </div>
+            <div id="skillTitleBox1" class="w-[110px] h-[20px] bg-white flex justify-center max-[639px]:hidden max-[790px]:w-[80px] max-[512px]:w-[65px]">
+                <span>HTML</span>
+            </div>
+        </div>
+
+        <div id="skillBox2" class="mr-6 ml-6 mb-8 max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:mr-3 max-[512px]:ml-3 max-[512px]:mb-4 max-[311px]:mr-1 max-[311px]:ml-1 max-[311px]:mb-3">
+            <div id="skillImgBox2" class="w-[110px] h-[110px]  mb-2 flex justify-center items-center max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+                <img src="assets/icons8-css3-96.png" alt="logo CSS" class="w-[110px] h-[110px] max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]" >
+            </div>
+            <div id="skillTitleBox2" class="w-[110px] h-[20px] bg-white flex justify-center max-[639px]:hidden max-[790px]:w-[80px] max-[512px]:w-[65px]">
+                <span>CSS</span>
+            </div>
+        </div>
+
+        <div id="skillBox3" class="mr-6 ml-6 mb-8 max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:mr-3 max-[512px]:ml-3 max-[512px]:mb-4 max-[311px]:mr-1 max-[311px]:ml-1 max-[311px]:mb-3">
+            <div id="skillImgBox3" class="w-[110px] h-[110px] mb-2 flex justify-center items-center max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+                <img src="assets/icons8-javascript-96.png" alt="logo JS" class="w-[110px] h-[110px] max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+            </div>
+            <div id="skillTitleBox3" class="w-[110px] h-[20px] bg-white flex justify-center max-[639px]:hidden max-[790px]:w-[80px] max-[512px]:w-[65px]">
+                <span>JS</span>
+            </div>
+        </div>
+
+        <div id="skillBox4" class="mr-6 ml-6 mb-8 max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:mr-3 max-[512px]:ml-3 max-[512px]:mb-4 max-[311px]:mr-1 max-[311px]:ml-1 max-[311px]:mb-3">
+            <div id="skillImgBox6" class="w-[110px] h-[110px] mb-2 flex justify-center items-center max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+                <img src="assets/logo_Tailwind.png" alt="logo Tailwind" class="w-[110px] h-[110px] max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+            </div>
+            <div id="skillTitleBox6" class="w-[110px] h-[20px] bg-white flex justify-center max-[639px]:hidden max-[790px]:w-[80px] max-[512px]:w-[65px]">
+                <span>Tailwind</span>
+            </div>
+        </div>
+
+        <div id="skillBox5" class="mr-6 ml-6 mb-8 max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:mr-3 max-[512px]:ml-3 max-[512px]:mb-4 max-[311px]:mr-1 max-[311px]:ml-1 max-[311px]:mb-3">
+            <div id="skillImgBox5" class="w-[110px] h-[110px]  mb-2 flex justify-center items-center max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+                <img src="assets/logo_Vue.png" alt="logo vue" class="w-[90px] h-[90px] max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+            </div>
+            <div id="skillTitleBox5" class="w-[110px] h-[20px] bg-white flex justify-center max-[639px]:hidden max-[790px]:w-[80px] max-[512px]:w-[65px]">
+                <span>Vue.Js</span>
+            </div>
+        </div>
+
+        <div id="skillBox6" class="mr-6 ml-6 mb-8 max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:mr-3 max-[512px]:ml-3 max-[512px]:mb-4 max-[311px]:mr-1 max-[311px]:ml-1 max-[311px]:mb-3">
+            <div id="skillImgBox4" class="w-[110px] h-[110px] mb-2 flex justify-center items-center max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+                <img src="assets/logo_PHP.png" alt="logo PHP" class="w-[110px] h-[110px] max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+            </div>
+            <div id="skillTitleBox4" class="w-[110px] h-[20px] bg-white flex justify-center max-[639px]:hidden max-[790px]:w-[80px] max-[512px]:w-[65px]">
+                <span>PHP</span>
+            </div>
+        </div>
+
+        <div id="skillBox7" class="mr-6 ml-6 mb-8 max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:mr-3 max-[512px]:ml-3 max-[512px]:mb-4 max-[311px]:mr-1 max-[311px]:ml-1 max-[311px]:mb-3">
+            <div id="skillImgBox7" class="w-[110px] h-[110px] mb-2 flex justify-center items-center max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+                <img src="assets/Logo_node.png" alt="logo Node" class="w-[110px] h-[110px] max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+            </div>
+            <div id="skillTitleBox7" class="w-[110px] h-[20px] bg-white flex justify-center max-[639px]:hidden max-[790px]:w-[80px] max-[512px]:w-[65px]">
+                <span>Node.Js</span>
+            </div>
+        </div>
+
+        <div id="skillBox8" class="mr-6 ml-6 mb-8 max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:mr-3 max-[512px]:ml-3 max-[512px]:mb-4 max-[311px]:mr-1 max-[311px]:ml-1 max-[311px]:mb-3">
+            <div id="skillImgBox8" class="w-[110px] h-[110px]  mb-2 flex justify-center items-center max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+                <img src="assets/logo_SASS.png" alt="logo SASS" class="w-[110px] h-[110px] max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+            </div>
+            <div id="skillTitleBox8" class="w-[110px] h-[20px] bg-white flex justify-center max-[639px]:hidden max-[790px]:w-[80px] max-[512px]:w-[65px]">
+                <span>Sass</span>
+            </div>
+        </div>
+
+        <div id="skillBox9" class="mr-6 ml-6 mb-8 max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:mr-3 max-[512px]:ml-3 max-[512px]:mb-4 max-[311px]:mr-1 max-[311px]:ml-1 max-[311px]:mb-3">
+            <div id="skillImgBox9" class="w-[110px] h-[110px] mb-2 flex justify-center items-center max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+                <img src="assets/logo_Laravel.png" alt="logo Laravel" class="w-[110px] h-[110px] max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+            </div>
+            <div id="skillTitleBox9" class="w-[110px] h-[20px] bg-white flex justify-center max-[639px]:hidden max-[790px]:w-[80px] max-[512px]:w-[65px]">
+                <span>Laravel</span>
+            </div>
+        </div>
+
+        <div id="skillBox10" class="mr-6 ml-6 mb-8 max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:mr-3 max-[512px]:ml-3 max-[512px]:mb-4 max-[311px]:mr-1 max-[311px]:ml-1 max-[311px]:mb-3">
+            <div id="skillImgBox10" class="w-[110px] h-[110px]  mb-2 flex justify-center items-center max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+                <img src="assets/logo_MySQL.png" alt="logo MySQL" class="w-[110px] h-[110px] max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+            </div>
+            <div id="skillTitleBox10" class="w-[110px] h-[20px] bg-white flex justify-center max-[639px]:hidden max-[790px]:w-[80px] max-[512px]:w-[65px]n">
+                <span>MySQL</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="h-32"></div>
+
+<h3 class="flex justify-center text-[25px] font-bold text-white py-8 ">Mes Projets</h3>
+
+
+<div id="projectContainer" class=" w-full  ">
+
+
+    <div id="projectBox1" class="flex md:justify-between mt-[30px] md:mx-24 max-[800px]:flex-col max-[800px]:mx-10">
+        <div id="projectDesc" class="w-[400px] md:h-96 font-bold text-white flex flex-col max-[800px]:justify-start justify-evenly max-[800px]:w-full max-[800px]:justify-center bg-black rounded-xl">
+                <h3 class="text-[20px] mb-4 flex justify-center text-cyan-400 ">
+                    Pokedex
+                </h3>
+            <p class="text-[15px] max-md:text-center mx-5">
+                Ce projet, effectuer en groupe de 5, nous à pris une semaine à réaliser. L'objectif etait de créer un site,
+                qui utilise l'api PokeAPI, qui puisse lister, afficher, stocker, tout les pokemons existants.
+                J'ai principalement été impliqué dans la partie recherche des pokemons, ainsi que l'affichage et énumération de leurs charactéristiques, statistiques, évolutions, etc
+                Le site est très fourni en défi caché, nous nous sommes beaucoup investi dans ce projet. <br>
+                Langages utilisés: Javascript, HTML, CSS
+            </p>
+
+            <div class="flex justify-center ">
+                <a class="btnLink bg-cyan-400 " href="https://iim-creative-technology.github.io/JS-A2-la-Team-Croquette-pokedex/">
+                    <span>Voir le site</span>
+                </a>
+                <a class="btnLink bg-cyan-400 " href="https://github.com/IIM-Creative-Technology/JS-A2-la-Team-Croquette-pokedex">
+                    <span>Accéder au projet</span>
+                </a>
+            </div>
+
+            </div>
+        <div id="projectImg" class="w-[900px] h-96 flex justify-center align-center overflow-hidden max-[800px]:justify-center max-[800px]:w-full rounded-xl bg-red-300 object-cover border-4 border-black">
+            <img src="assets/pokescreen.PNG" alt="Photo de profile" class="w-[900px] h-96 flex justify-center align-center overflow-hidden max-[800px]:justify-center max-[800px]:w-full rounded-xl bg-red-300 object-cover ">
         </div>
     </div>
 
-    <input type="radio" name="slider" id="slider2">
-    <label for="slider2"></label>
-    <div class="slide slide2">
-        <div class="presSlide">
-            <div class="presBox">
+    <div class="h-24"></div>
 
-                <div class="presText">
-                    <div class="stickyPres"></div>
-                    <h2>Qui suis-je ?</h2>
-                    <div class="stickyPres"></div>
-                    <p>
-                        J'ai commencé la programmation au lycée, <br>
-                        principalement avec Python et un peu SQL.<br>
-                        Aujourd'hui ,étudiant à l'IIM, je me forme <br>
-                        dans l'axe Coding & Digital Innovation,<br>
-                        dans le but de devenir developpeur web.<br>
-                    </p>
-                </div>
 
-                <div class="presSkills">
-                    <div class="stickyPres"></div>
-                    <h2>Skills</h2>
-                    <p>Je maitrise les languages suivants:</p>
-                    <div class="stickyPres"></div>
-                    <img src="img/icons8-html-5-96.png" alt="">
-                    <img src="img/icons8-css3-96.png" alt="">
-                    <img src="img/icons8-javascript-96.png" alt="">
-                    <img src="img/icons8-php-logo-64.png" alt="">
-                    <img src="img/icons8-sql-60.png" alt="">
-                    <img src="img/icons8-python-file-100.png" alt="">
-                    <div class="stickyPres"></div>
-                </div>
+    <div id="projectBox1" class="flex md:justify-between mt-[30px] md:mx-24 max-[800px]:flex-col max-[800px]:mx-10 ">
+        <div id="projectImg" class="w-[900px] h-96 flex justify-center align-center overflow-hidden max-[800px]:justify-center max-[800px]:w-full rounded-xl bg-red-300 object-cover border-4 border-black">
+            <img src="assets/backscreen.PNG" alt="Photo de profile" class="w-[900px] h-96 flex justify-center align-center overflow-hidden max-[800px]:justify-center max-[800px]:w-full rounded-xl bg-red-300 object-cover ">
+        </div>
+        <div id="projectDesc" class="w-[400px] md:h-96 font-bold text-white flex flex-col max-[800px]:justify-start justify-evenly max-[800px]:w-full max-[800px]:justify-center bg-black rounded-xl">
+            <h3 class="text-[20px] mb-4 flex justify-center text-cyan-400">
+                Site de streaming
+            </h3>
+            <p class="text-[15px] max-md:text-center mx-5">
+                Ce projet est une interface de site de streaming, qui utilise l'api TheMovieDB. On peux y rechercher des films, les trier par catégorie, faire des albums de films, et les partager avec d'autres utilisateurs.
+                Ce travail à été réaliser en duo. Sur la semaine qui nous fut accordé, j'ai travaillé sur tout le système de trie selon la popularité, les genres, les notes des utilisateurs ainsi
+                que la recherche de films. Je me suis également occupé de la partie visuelle du site. <br>
+                Langages utilisés: PHP, HTML, TailwindCSS
 
-                <div class="presImage">
-                    <img src="img/PhotoProProfile.jpg" alt="">
-                </div>
+            </p>
 
+            <div class="flex justify-center ">
+                <a class="btnLink bg-cyan-400 " href="https://github.com/antoinebayssac/projet-back/tree/ryan">
+                    <span>Accéder au projet</span>
+                </a>
             </div>
+
+        </div>
+
+    </div>
+
+    <div class="h-24"></div>
+
+    <div id="projectBox1" class="flex md:justify-between mt-[30px] md:mx-24 max-[800px]:flex-col max-[800px]:mx-10">
+        <div id="projectDesc" class="w-[400px] md:h-96 font-bold text-white flex flex-col max-[800px]:justify-start justify-evenly max-[800px]:w-full max-[800px]:justify-center bg-black rounded-xl">
+            <h3 class="text-[20px] mb-4 flex justify-center text-cyan-400">
+                Système d'appel
+            </h3>
+            <p class="text-[15px] max-md:text-center mx-5">
+                Ce site est une interface d'appel téléphonique fait avec le framework Vue.js. Vous pouvez appeler un numéro, enregistrer des contacts et voir l'historiques des appels dans le répertoire.
+                Langages utilisés: Vue.JS, TailwindCSS
+            </p>
+
+            <div class="flex justify-center ">
+                <a class="btnLink bg-cyan-400 " href="https://github.com/REIG3N/Rendu-VUE">
+                    <span>Accéder au projet</span>
+                </a>
+            </div>
+
+        </div>
+        <div id="projectImg" class="w-[900px] h-96 flex justify-center align-center overflow-hidden max-[800px]:justify-center max-[800px]:w-full rounded-xl bg-red-300 object-cover border-4 border-black">
+            <img src="assets/vue.PNG" alt="Photo de profile" class="w-[900px] h-96 flex justify-center align-center overflow-hidden max-[800px]:justify-center max-[800px]:w-full rounded-xl bg-red-300 object-cover ">
         </div>
     </div>
 
-    <input type="radio" name="slider" id="slider3">
-    <label for="slider3"></label>
-    <div class="slide slide3">
-        <div class="presSlide">
-            <div class="presBox">
-                    <h2>Mes Projets</h2>
 
-            </div>
-        </div>
-    </div>
+</div>
 
-
-</main>
-
-    <a class="btnLink" href="projets.html">
-    <span>Voir mes projets</span>
-</a>
+<div class="h-32"></div>
 
 </body>
+<script src="script.js" defer></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 </html>
