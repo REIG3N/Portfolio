@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Bardat Ryan</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal({ reset: true });
+    </script>
+</head>
+<body class="bg-[#0C1734] bg-[url('assets/StarBackground.png')]" >
+
+<nav class="p-5 shadow md:flex md:items-center md:justify-between ">
+    <div class="flex justify-between items-center ">
+
+
+        <span class="text-3xl cursor-pointer mx-2 md:hidden block ">
+        <ion-icon name="menu" class="bg-cyan-400" onclick="Menu(this)"></ion-icon>
+      </span>
+    </div>
+
+    <ul class="md:flex md:items-center z-[1] md:z-auto md:static absolute  w-full left-0  md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 max-md:bg-white">
+        <li class="mx-4 my-6 md:my-0">
+            <a href="#" class="text-xl text-cyan-400 hover:text-white duration-500 max-md:hover:text-black ">HOME</a>
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+            <a href="#" class="text-xl text-cyan-400 hover:text-white duration-500 max-md:hover:text-black">SKILLS</a>
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+            <a href="#" class="text-xl text-cyan-400 hover:text-white duration-500 max-md:hover:text-black">PROJECTS</a>
+        </li>
+    </ul>
+</nav>
+
+
+<script>
+
+</script>
+
+<div id="presContainer" class="flex justify-center mt-[30px]">
+    <div class=" w-[1100px] h-[550px] flex  justify-between max-[800px]:flex-col max-[800px]:w-full max-[800px]:justify-center">
+
+        <div id="presText" class=" w-[400px] h-full font-bold text-white flex flex-col justify-between max-[800px]:justify-start  max-[800px]:w-full max-[800px]:justify-center">
+            <div id="presTextPart1" class="">
+                <h1 class="text-[50px] font-bold text-white max-[800px]:ml-10 ">
+                    BARDAT Ryan
+                </h1>
+                <h3 class="text-[25px]  max-[800px]:ml-10 text-cyan-400 ">
+                    Developpeur Web
+                </h3>
+            </div>
+            <div id="presTextPart2" class=" ml-[50px] mb-[50px]  max-[800px]:mr-[50px] ">
+                <h3 class="text-[20px] mb-4">
+                    Qui suis-je ?
+                </h3>
+                <p class="text-[15px]">
+                    Je m'intéresse à la programation depuis le lycée. Aujourd'hui, j'étudie à l'IIM, dans l'axe Coding & Digitale Innovation dans le but de devenir developpeur web, notamment front-end.
+                </p>
+            </div>
+        </div>
+        <div id="presImage" class="w-[400px] h-full flex justify-center align-center overflow-hidden max-[800px]:justify-center max-[800px]:w-full rounded-xl ">
+            <img src="assets/PhotoProProfile.jpg" alt="Photo de profile" class="rounded-xl">
+        </div>
+    </div>
+</div>
+
+<div class="h-32"></div>
+
+<div id="skillsContainer" class="bg-neutral-900 w-full h-[500px] ">
+        <h3 class="flex justify-center text-[25px] font-bold text-white pt-8 pb-6 ">Mes Compétences</h3>
+
+
+    <div id="skillsBox" class=" flex flex-wrap h-96 flex justify-center items-center max-[790px]:mb-10 max-[639px]:mb-20">
+
+        <div id="skillBox1" class="mr-6 ml-6 mb-8 max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:mr-3 max-[512px]:ml-3 max-[512px]:mb-4 max-[311px]:mr-1 max-[311px]:ml-1 max-[311px]:mb-3 ">
+            <div id="skillImgBox1" class="w-[110px] h-[110px] mb-2 flex justify-center items-center max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+                <img src="assets/icons8-html-5-96.png" alt="logo HTML" class="w-[110px] h-[110px] max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+            </div>
+            <div id="skillTitleBox1" class="w-[110px] h-[20px] bg-white flex justify-center max-[639px]:hidden max-[790px]:w-[80px] max-[512px]:w-[65px]">
+                <span>HTML</span>
+            </div>
+        </div>
+
+        <div id="skillBox2" class="mr-6 ml-6 mb-8 max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:mr-3 max-[512px]:ml-3 max-[512px]:mb-4 max-[311px]:mr-1 max-[311px]:ml-1 max-[311px]:mb-3">
+            <div id="skillImgBox2" class="w-[110px] h-[110px]  mb-2 flex justify-center items-center max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+                <img src="assets/icons8-css3-96.png" alt="logo CSS" class="w-[110px] h-[110px] max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]" >
+            </div>
+            <div id="skillTitleBox2" class="w-[110px] h-[20px] bg-white flex justify-center max-[639px]:hidden max-[790px]:w-[80px] max-[512px]:w-[65px]">
+                <span>CSS</span>
+            </div>
+        </div>
+
+        <div id="skillBox3" class="mr-6 ml-6 mb-8 max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:mr-3 max-[512px]:ml-3 max-[512px]:mb-4 max-[311px]:mr-1 max-[311px]:ml-1 max-[311px]:mb-3">
+            <div id="skillImgBox3" class="w-[110px] h-[110px] mb-2 flex justify-center items-center max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+                <img src="assets/icons8-javascript-96.png" alt="logo JS" class="w-[110px] h-[110px] max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+            </div>
+            <div id="skillTitleBox3" class="w-[110px] h-[20px] bg-white flex justify-center max-[639px]:hidden max-[790px]:w-[80px] max-[512px]:w-[65px]">
+                <span>JS</span>
+            </div>
+        </div>
+
+        <div id="skillBox4" class="mr-6 ml-6 mb-8 max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:mr-3 max-[512px]:ml-3 max-[512px]:mb-4 max-[311px]:mr-1 max-[311px]:ml-1 max-[311px]:mb-3">
+            <div id="skillImgBox6" class="w-[110px] h-[110px] mb-2 flex justify-center items-center max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+                <img src="assets/logo_Tailwind.png" alt="logo Tailwind" class="w-[110px] h-[110px] max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+            </div>
+            <div id="skillTitleBox6" class="w-[110px] h-[20px] bg-white flex justify-center max-[639px]:hidden max-[790px]:w-[80px] max-[512px]:w-[65px]">
+                <span>Tailwind</span>
+            </div>
+        </div>
+
+        <div id="skillBox5" class="mr-6 ml-6 mb-8 max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:mr-3 max-[512px]:ml-3 max-[512px]:mb-4 max-[311px]:mr-1 max-[311px]:ml-1 max-[311px]:mb-3">
+            <div id="skillImgBox5" class="w-[110px] h-[110px]  mb-2 flex justify-center items-center max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+                <img src="assets/logo_Vue.png" alt="logo vue" class="w-[90px] h-[90px] max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+            </div>
+            <div id="skillTitleBox5" class="w-[110px] h-[20px] bg-white flex justify-center max-[639px]:hidden max-[790px]:w-[80px] max-[512px]:w-[65px]">
+                <span>Vue.Js</span>
+            </div>
+        </div>
+
+        <div id="skillBox6" class="mr-6 ml-6 mb-8 max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:mr-3 max-[512px]:ml-3 max-[512px]:mb-4 max-[311px]:mr-1 max-[311px]:ml-1 max-[311px]:mb-3">
+            <div id="skillImgBox4" class="w-[110px] h-[110px] mb-2 flex justify-center items-center max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+                <img src="assets/logo_PHP.png" alt="logo PHP" class="w-[110px] h-[110px] max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+            </div>
+            <div id="skillTitleBox4" class="w-[110px] h-[20px] bg-white flex justify-center max-[639px]:hidden max-[790px]:w-[80px] max-[512px]:w-[65px]">
+                <span>PHP</span>
+            </div>
+        </div>
+
+        <div id="skillBox7" class="mr-6 ml-6 mb-8 max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:mr-3 max-[512px]:ml-3 max-[512px]:mb-4 max-[311px]:mr-1 max-[311px]:ml-1 max-[311px]:mb-3">
+            <div id="skillImgBox7" class="w-[110px] h-[110px] mb-2 flex justify-center items-center max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+                <img src="assets/Logo_node.png" alt="logo Node" class="w-[110px] h-[110px] max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+            </div>
+            <div id="skillTitleBox7" class="w-[110px] h-[20px] bg-white flex justify-center max-[639px]:hidden max-[790px]:w-[80px] max-[512px]:w-[65px]">
+                <span>Node.Js</span>
+            </div>
+        </div>
+
+        <div id="skillBox8" class="mr-6 ml-6 mb-8 max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:mr-3 max-[512px]:ml-3 max-[512px]:mb-4 max-[311px]:mr-1 max-[311px]:ml-1 max-[311px]:mb-3">
+            <div id="skillImgBox8" class="w-[110px] h-[110px]  mb-2 flex justify-center items-center max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+                <img src="assets/logo_SASS.png" alt="logo SASS" class="w-[110px] h-[110px] max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+            </div>
+            <div id="skillTitleBox8" class="w-[110px] h-[20px] bg-white flex justify-center max-[639px]:hidden max-[790px]:w-[80px] max-[512px]:w-[65px]">
+                <span>Sass</span>
+            </div>
+        </div>
+
+        <div id="skillBox9" class="mr-6 ml-6 mb-8 max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:mr-3 max-[512px]:ml-3 max-[512px]:mb-4 max-[311px]:mr-1 max-[311px]:ml-1 max-[311px]:mb-3">
+            <div id="skillImgBox9" class="w-[110px] h-[110px] mb-2 flex justify-center items-center max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+                <img src="assets/logo_Laravel.png" alt="logo Laravel" class="w-[110px] h-[110px] max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+            </div>
+            <div id="skillTitleBox9" class="w-[110px] h-[20px] bg-white flex justify-center max-[639px]:hidden max-[790px]:w-[80px] max-[512px]:w-[65px]">
+                <span>Laravel</span>
+            </div>
+        </div>
+
+        <div id="skillBox10" class="mr-6 ml-6 mb-8 max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:mr-3 max-[512px]:ml-3 max-[512px]:mb-4 max-[311px]:mr-1 max-[311px]:ml-1 max-[311px]:mb-3">
+            <div id="skillImgBox10" class="w-[110px] h-[110px]  mb-2 flex justify-center items-center max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+                <img src="assets/logo_MySQL.png" alt="logo MySQL" class="w-[110px] h-[110px] max-[790px]:h-[80px] max-[790px]:w-[80px] max-[512px]:w-[65px] max-[512px]:h-[65px]">
+            </div>
+            <div id="skillTitleBox10" class="w-[110px] h-[20px] bg-white flex justify-center max-[639px]:hidden max-[790px]:w-[80px] max-[512px]:w-[65px]n">
+                <span>MySQL</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="h-32"></div>
+
+<h3 class="flex justify-center text-[25px] font-bold text-white py-8 ">Mes Projets</h3>
+
+
+<div id="projectContainer" class=" w-full  ">
+
+
+    <div id="projectBox1" class="flex md:justify-between mt-[30px] md:mx-24 max-[800px]:flex-col max-[800px]:mx-10">
+        <div id="projectDesc" class="w-[400px] md:h-96 font-bold text-white flex flex-col max-[800px]:justify-start justify-evenly max-[800px]:w-full max-[800px]:justify-center bg-black rounded-xl">
+                <h3 class="text-[20px] mb-4 flex justify-center text-cyan-400 ">
+                    Pokedex
+                </h3>
+            <p class="text-[15px] max-md:text-center mx-5">
+                Ce projet, effectuer en groupe de 5, nous à pris une semaine à réaliser. L'objectif etait de créer un site,
+                qui utilise l'api PokeAPI, qui puisse lister, afficher, stocker, tout les pokemons existants.
+                J'ai principalement été impliqué dans la partie recherche des pokemons, ainsi que l'affichage et énumération de leurs charactéristiques, statistiques, évolutions, etc
+                Le site est très fourni en défi caché, nous nous sommes beaucoup investi dans ce projet. <br>
+                Langages utilisés: Javascript, HTML, CSS
+            </p>
+
+            <div class="flex justify-center ">
+                <a class="btnLink bg-cyan-400 " href="https://iim-creative-technology.github.io/JS-A2-la-Team-Croquette-pokedex/">
+                    <span>Voir le site</span>
+                </a>
+                <a class="btnLink bg-cyan-400 " href="https://github.com/IIM-Creative-Technology/JS-A2-la-Team-Croquette-pokedex">
+                    <span>Accéder au projet</span>
+                </a>
+            </div>
+
+            </div>
+        <div id="projectImg" class="w-[900px] h-96 flex justify-center align-center overflow-hidden max-[800px]:justify-center max-[800px]:w-full rounded-xl bg-red-300 object-cover border-4 border-black">
+            <img src="assets/pokescreen.PNG" alt="Photo de profile" class="w-[900px] h-96 flex justify-center align-center overflow-hidden max-[800px]:justify-center max-[800px]:w-full rounded-xl bg-red-300 object-cover ">
+        </div>
+    </div>
+
+    <div class="h-24"></div>
+
+
+    <div id="projectBox1" class="flex md:justify-between mt-[30px] md:mx-24 max-[800px]:flex-col max-[800px]:mx-10 ">
+        <div id="projectImg" class="w-[900px] h-96 flex justify-center align-center overflow-hidden max-[800px]:justify-center max-[800px]:w-full rounded-xl bg-red-300 object-cover border-4 border-black">
+            <img src="assets/PokeQuizz.png" alt="Photo de profile" class="w-[900px] h-96 flex justify-center align-center overflow-hidden max-[800px]:justify-center max-[800px]:w-full rounded-xl bg-red-300 object-cover ">
+        </div>
+        <div id="projectDesc" class="w-[400px] md:h-96 font-bold text-white flex flex-col max-[800px]:justify-start justify-evenly max-[800px]:w-full max-[800px]:justify-center bg-black rounded-xl">
+            <h3 class="text-[20px] mb-4 flex justify-center text-cyan-400">
+                Quizz Pokemon React Js
+            </h3>
+            <p class="text-[15px] max-md:text-center mx-5">
+                Ce projet est un projet personnel qui a été réalisé en 1 semaine, dans le but de découvrir reactjs et d'obtenir une alternance qui me testait. Il a été réalisé en utilisant l'Api PokeAPI (https://api-pokemon-fr.vercel.app).
+                C'etait un projet intéressant car je découvrais encore un peu React. De plus, le fais d'avoir 1 semaine pour réussir ce projet avec peu de connaissance du framework etait enrichissant, 
+                et concevoir un quizz pokemon était également amusant. 
+                Langages utilisés: ReactJS, CSS, Axios
+            </p>
+
+            <div class="flex justify-center ">
+                <a class="btnLink bg-cyan-400 " href="https://spallian-pokeapi-g31gkg7j0-reig3n.vercel.app/">
+                    <span>Voir le site</span>
+                </a>
+                <a class="btnLink bg-cyan-400 " href="https://github.com/REIG3N/Spallian-pokeapi">
+                    <span>Accéder au projet</span>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="h-24"></div>
+
+    <div id="projectBox1" class="flex md:justify-between mt-[30px] md:mx-24 max-[800px]:flex-col max-[800px]:mx-10">
+        <div id="projectDesc" class="w-[400px] md:h-96 font-bold text-white flex flex-col max-[800px]:justify-start justify-evenly max-[800px]:w-full max-[800px]:justify-center bg-black rounded-xl">
+            <h3 class="text-[20px] mb-4 flex justify-center text-cyan-400">
+                Quizz de maison d'Harry Potter
+            </h3>
+            <p class="text-[15px] max-md:text-center mx-5">
+                Ce site est un quizz Harry Potter qui détermine la maison dans laquelle vous pourriez intégrer dans l'univers des livre. Ce site, fait en duo sur 1 semaine, a été réalisé dans le but de potentiellement être exposé lors des journées portes ouvertes
+                de notre école, il n'est donc pas responsive. De plus, ce projet nous auras servi d'introduction a l'utilisation de la librairies GSAP, qui sert a réaliser des animations en javascript.
+                Langages utilisés: Javascript, HTML, CSS, GSAP
+            </p>
+
+            <div class="flex justify-center ">
+                <a class="btnLink bg-cyan-400 " href="https://creative-dev-gsap-harry-potter-c88u.vercel.app/">
+                    <span>Voir le site</span>
+                </a>
+                <a class="btnLink bg-cyan-400 " href="https://github.com/REIG3N/creative-dev-GSAP-Harry-Potter">
+                    <span>Accéder au projet</span>
+                </a>
+            </div>
+
+        </div>
+        <div id="projectImg" class="w-[900px] h-96 flex justify-center align-center overflow-hidden max-[800px]:justify-center max-[800px]:w-full rounded-xl bg-red-300 object-cover border-4 border-black">
+            <img src="assets/harry_potter_quizz.png" alt="Photo de profile" class="w-[900px] h-96 flex justify-center align-center overflow-hidden max-[800px]:justify-center max-[800px]:w-full rounded-xl bg-red-300 object-cover ">
+        </div>
+    </div>
+
+
+</div>
+
+<div class="h-32"></div>
+
+</body>
+<script src="script.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/2.0.0/scrollReveal.js"></script>
+
+</html>
