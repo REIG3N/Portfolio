@@ -290,6 +290,17 @@ a[download]:hover {
     }
 }
 
+/* Flèches rebondissantes hero mobile */
+@keyframes bounceDown {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}
+
+.bounce-arrow {
+    display: inline-block;
+    animation: bounceDown 1s ease-in-out infinite;
+}
+
 /* Styles pour le système "Lire plus" */
 .read-more-text {
     display: -webkit-box;
