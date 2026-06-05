@@ -349,6 +349,13 @@ a[download]:hover {
     }
 }
 
+/* Masquer le menu burger sous 590px */
+@media (max-width: 590px) {
+    body > nav {
+        display: none !important;
+    }
+}
+
 /* Responsive fixes pour les très petits écrans */
 @media (max-width: 477px) {
     /* Séparateurs fixes pour très très petits écrans */
