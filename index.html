@@ -66,12 +66,6 @@
             >Accueil</a
           >
           <a
-            href="#skillsContainer"
-            class="text-white text-2xl font-semibold hover:text-[#00BCC8] transition-colors duration-300"
-            onclick="closeMenu()"
-            >Compétences</a
-          >
-          <a
             href="#projectContainer"
             class="text-white text-2xl font-semibold hover:text-[#00BCC8] transition-colors duration-300"
             onclick="closeMenu()"
@@ -102,30 +96,7 @@
 
       <div class="w-full min-[1200px]:w-1/2 p-8">
         <h1 class="text-6xl font-bold mb-4">BARDAT Ryan</h1>
-        <p class="text-3xl font-semibold mb-4">Développeur Fullstack</p>
-        <div class="mr-10 min-[550px]:mr-24">
-          <p class="text-lg mb-6"></p>
-
-          <div>
-            <p class="text-lg mb-4 read-more-text" id="hero-description">
-              Développeur full-stack qui construit des projets à partir de
-              problèmes réels que je rencontre. Mon approche du code privilégie
-              la compréhension en profondeur des architectures plutôt que
-              l'application superficielle de frameworks. Autonome dans la
-              résolution de blocages techniques, je privilégie les solutions
-              pragmatiques qui fonctionnent plutôt que la complexité inutile.
-              Face à un problème, je décompose méthodiquement jusqu'à isoler la
-              source et implémenter la correction la plus directe.
-            </p>
-            <button
-              class="read-more-btn"
-              onclick="toggleReadMore('hero-description', this)"
-            >
-              Lire plus
-            </button>
-            
-          </div>
-        </div>
+        <p class="text-3xl font-semibold mb-4">Portfolio</p>
       </div>
     </section>
 
@@ -142,206 +113,167 @@
       </div>
     </div>
 
-    <!-- Section Compétences -->
+    <!-- Section Projets -->
     <section
-      id="skillsContainer"
+      id="projectContainer"
       class="flex flex-col items-center bg-[#1f0043] min-h-[700px] py-12"
     >
-      <h2 class="text-white text-4xl font-bold mt-12 mb-8">Compétences</h2>
+      <h2 class="text-white text-4xl font-bold mt-12 mb-12">Projets</h2>
 
-      <!-- Conteneur flex pour compétences techniques et expériences côte à côte sur desktop/tablette -->
       <div
-        class="w-full max-w-7xl px-8 flex flex-col lg:flex-row lg:items-start lg:gap-12 mb-12"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl w-full px-8 pb-12"
       >
-        <!-- Compétences techniques -->
-        <div class="flex-1 flex flex-col items-center mb-8 lg:mb-0">
-          <h3 class="text-white text-2xl font-bold mb-6">Technologies</h3>
-          <div class="flex flex-col justify-center">
-            <div class="flex min-[330px]:mr-[40px]">
-              <div
-                class="w-[80px] h-[80px] bg-[#D9D9D9] rounded-xl mx-1 my-2 flex items-center justify-center min-[700px]:w-[120px] min-[700px]:h-[120px] min-[1200px]:w-[140px] min-[1200px]:h-[140px]"
+        <div class="bg-[#D9D9D9] rounded-xl p-6 flex flex-col">
+          <a
+            href="https://github.com/REIG3N/SparringCompanion"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block mb-4"
+          >
+            <img
+              src="assets/images/projects/combined_screens.png"
+              alt="Capture d'écran du projet Sparring Companion"
+              class="w-full h-48 object-cover rounded-xl"
+            />
+          </a>
+          <div class="flex-1 flex flex-col">
+            <h3 class="text-xl font-bold mb-3 text-black">Sparring Companion</h3>
+            <div class="flex-1">
+              <p class="text-black mb-4 read-more-text" id="sparring-description">
+                Application mobile d'accompagnement pour les pratiquants d'arts
+                martiaux. Compagnon de développement autonome proposant un
+                journal de sparring intelligent, un tableau de bord personnalisé
+                et des outils de réflexion guidée basés sur la métacognition.
+              </p>
+              <button
+                class="read-more-btn text-sm mb-4"
+                onclick="toggleReadMore('sparring-description', this)"
               >
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
-                  alt="Logo TypeScript"
-                  class="w-[60px] h-[60px] items-center min-[700px]:w-[100px] min-[700px]:h-[100px]"
-                />
-              </div>
-              <div
-                class="w-[80px] h-[80px] bg-[#D9D9D9] rounded-xl mx-1 my-2 flex items-center justify-center min-[700px]:w-[120px] min-[700px]:h-[120px] min-[1200px]:w-[140px] min-[1200px]:h-[140px]"
-              >
-                <img
-                  src="assets/icons/tech/react-native-logo.png"
-                  alt="Logo React Native"
-                  class="w-[60px] h-[60px] items-center min-[700px]:w-[100px] min-[700px]:h-[100px]"
-                />
-              </div>
-              <div
-                class="w-[80px] h-[80px] bg-[#D9D9D9] rounded-xl mx-1 my-2 flex items-center justify-center min-[700px]:w-[120px] min-[700px]:h-[120px] min-[1200px]:w-[140px] min-[1200px]:h-[140px]"
-              >
-                <img
-                  src="assets/icons/tech/logo_Angular.png"
-                  alt="Logo Angular"
-                  class="w-[60px] h-[80px] items-center min-[700px]:w-[90px] min-[700px]:h-[105px]"
-                />
-              </div>
+                Lire plus
+              </button>
             </div>
-            <div class="flex justify-center items-center">
-              <div
-                class="w-[80px] h-[80px] bg-[#D9D9D9] rounded-xl mx-1 my-2 flex items-center justify-center min-[700px]:w-[120px] min-[700px]:h-[120px] min-[1200px]:w-[140px] min-[1200px]:h-[140px]"
-              >
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
-                  alt="Logo Python"
-                  class="w-[60px] h-[60px] items-center min-[700px]:w-[100px] min-[700px]:h-[100px]"
-                />
-              </div>
-              <div
-                class="w-[80px] h-[80px] bg-[#D9D9D9] rounded-xl mx-1 my-2 flex items-center justify-center min-[700px]:w-[120px] min-[700px]:h-[120px] min-[1200px]:w-[140px] min-[1200px]:h-[140px]"
-              >
-                <img
-                  src="assets/icons/tech/cdnlogo.com_node-js.svg"
-                  alt="Logo Node.js"
-                  class="w-[60px] h-[60px] items-center min-[700px]:w-[100px] min-[700px]:h-[100px]"
-                />
-              </div>
-              <div
-                class="w-[80px] h-[80px] bg-[#D9D9D9] rounded-xl mx-1 my-2 flex items-center justify-center min-[700px]:w-[120px] min-[700px]:h-[120px] min-[1200px]:w-[140px] min-[1200px]:h-[140px]"
-              >
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg"
-                  alt="Logo .NET Core"
-                  class="w-[60px] h-[60px] items-center min-[700px]:w-[100px] min-[700px]:h-[100px]"
-                />
-              </div>
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="px-3 py-1 bg-black text-white text-sm rounded-full">React Native</span>
+              <span class="px-3 py-1 bg-black text-white text-sm rounded-full">Supabase</span>
+              <span class="px-3 py-1 bg-black text-white text-sm rounded-full">Expo</span>
             </div>
-            <div class="flex min-[330px]:ml-[40px]">
-              <div
-                class="w-[80px] h-[80px] bg-[#D9D9D9] rounded-xl mx-1 my-2 flex items-center justify-center min-[700px]:w-[120px] min-[700px]:h-[120px] min-[1200px]:w-[140px] min-[1200px]:h-[140px]"
-              >
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original-wordmark.svg"
-                  alt="Logo Bootstrap"
-                  class="w-[60px] h-[60px] items-center min-[700px]:w-[100px] min-[700px]:h-[100px]"
-                />
-              </div>
-              <div
-                class="w-[80px] h-[80px] bg-[#D9D9D9] rounded-xl mx-1 my-2 flex items-center justify-center min-[700px]:w-[120px] min-[700px]:h-[120px] min-[1200px]:w-[140px] min-[1200px]:h-[140px]"
-              >
-                <img
-                  src="assets/icons/tech/devicon_tailwindcss@2x.png"
-                  alt="Logo Tailwind CSS"
-                  class="w-[60px] h-[60px] items-center min-[700px]:w-[100px] min-[700px]:h-[100px]"
-                />
-              </div>
-              <div
-                class="w-[80px] h-[80px] bg-[#D9D9D9] rounded-xl mx-1 my-2 flex items-center justify-center min-[700px]:w-[120px] min-[700px]:h-[120px] min-[1200px]:w-[140px] min-[1200px]:h-[140px]"
-              >
-                <img
-                  src="assets/icons/tech/skill-icons_sass.svg"
-                  alt="Logo Sass"
-                  class="w-[60px] h-[60px] items-center min-[700px]:w-[100px] min-[700px]:h-[100px]"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Section Expériences -->
-        <div class="flex-1">
-          <h3 class="text-white text-2xl font-bold mb-8 text-center">
-            Expériences
-          </h3>
-
-          <div class="space-y-6">
-            <div class="bg-[#D9D9D9] rounded-xl p-6">
-              <div
-                class="flex flex-col md:flex-row md:justify-between md:items-start mb-3"
-              >
-                <div>
-                  <h4 class="text-black text-xl font-semibold mb-1">
-                    VIR by JP
-                  </h4>
-                  <p class="text-black text-opacity-80 text-sm mb-2">
-                    Apprenti développeur Fullstack
-                  </p>
-                </div>
-                <span class="text-black text-sm font-medium"
-                  >Novembre 2023 → Octobre 2024</span
-                >
-              </div>
-              <div class="text-black text-sm space-y-2">
-                <p class="mt-3 font-semibold">Sur la solution BTB Horizon :</p>
-                <div class="read-more-text" id="vir-description">
-                  <p>
-                    • Développer et programmer des fonctionnalités ou des
-                    modules
-                  </p>
-                  <p>
-                    • Participer aux analyses, à la recherche et au
-                    développement de solutions techniques
-                  </p>
-                  <p>• Tests unitaires et correction de bugs</p>
-                  <p>• Mise à jour des documentations techniques</p>
-                  <p>
-                    • Réalisation collaborative des adaptations / maintenance
-                    des systèmes de Horizon
-                  </p>
-                </div>
-                <button
-                  class="read-more-btn text-sm"
-                  onclick="toggleReadMore('vir-description', this)"
-                >
-                  Lire plus
-                </button>
-              </div>
-            </div>
-
-            <div class="bg-[#D9D9D9] rounded-xl p-6">
-              <div
-                class="flex flex-col md:flex-row md:justify-between md:items-start mb-3"
-              >
-                <div>
-                  <h4 class="text-black text-xl font-semibold mb-1">
-                    BIVILINK
-                  </h4>
-                  <p class="text-black text-opacity-80 text-sm mb-2">
-                    Stage développeur React / Fullstack
-                  </p>
-                </div>
-                <span class="text-black text-sm font-medium"
-                  >Juin → Août 2023</span
-                >
-              </div>
-              <div class="text-black text-sm space-y-2">
-                <p>• Refonte front-end du site web Wikiway</p>
-                <p>• Maquettage de l'application mobile Wikiway</p>
-                <p>
-                  • Refactorisation d'une des bases de données du site web Zemus
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Savoir être en dernière position -->
-      <div class="max-w-4xl w-full px-8">
-        <p class="text-white text-xl font-semibold mb-6 text-center">
-          Savoir être
-        </p>
-        <div class="flex flex-wrap justify-center gap-4">
-          <div class="bg-[#D9D9D9] rounded-xl px-6 py-3">
-            <span class="text-black text-lg font-semibold"
-              >Design Thinking</span
+            <a
+              href="https://github.com/REIG3N/SparringCompanion"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-black font-semibold hover:underline"
+              >Voir le repo →</a
             >
           </div>
-          <div class="bg-[#D9D9D9] rounded-xl px-6 py-3">
-            <span class="text-black text-lg font-semibold">Adaptabilité</span>
+        </div>
+
+        <div class="bg-[#D9D9D9] rounded-xl p-6 flex flex-col">
+          <a
+            href="https://spallian-pokeapi.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block mb-4"
+          >
+            <img
+              src="assets/images/projects/PokeQuizz.png"
+              alt="Capture d'écran du projet PokeQuizz"
+              class="w-full h-48 object-cover rounded-xl"
+            />
+          </a>
+          <div class="flex-1 flex flex-col">
+            <h3 class="text-xl font-bold mb-3 text-black">PokeQuizz</h3>
+            <div class="flex-1">
+              <p class="text-black mb-4 read-more-text" id="pokequizz-description">
+                Application de quiz interactive basée sur l'univers Pokémon.
+                Testez vos connaissances avec des questions dynamiques
+                alimentées par l'API PokéAPI.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="px-3 py-1 bg-black text-white text-sm rounded-full">React Native</span>
+              <span class="px-3 py-1 bg-black text-white text-sm rounded-full">TypeScript</span>
+              <span class="px-3 py-1 bg-black text-white text-sm rounded-full">API</span>
+            </div>
+            <a
+              href="https://spallian-pokeapi.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-black font-semibold hover:underline"
+              >Voir le projet →</a
+            >
           </div>
-          <div class="bg-[#D9D9D9] rounded-xl px-6 py-3">
-            <span class="text-black text-lg font-semibold"
-              >Intelligence collective</span
+        </div>
+
+        <div class="bg-[#D9D9D9] rounded-xl p-6 flex flex-col">
+          <a
+            href="https://creative-dev-gsap-harry-potter-c88u.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block mb-4"
+          >
+            <img
+              src="assets/images/projects/harry_potter_quizz.png"
+              alt="Capture d'écran du projet Harry Potter Quiz"
+              class="w-full h-48 object-cover rounded-xl"
+            />
+          </a>
+          <div class="flex-1 flex flex-col">
+            <h3 class="text-xl font-bold mb-3 text-black">Harry Potter Quiz</h3>
+            <div class="flex-1">
+              <p class="text-black mb-4 read-more-text" id="harrypotter-description">
+                Quiz immersif sur l'univers d'Harry Potter avec des animations
+                GSAP. Une expérience interactive et visuellement captivante pour
+                les fans de la saga.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="px-3 py-1 bg-black text-white text-sm rounded-full">GSAP</span>
+              <span class="px-3 py-1 bg-black text-white text-sm rounded-full">JavaScript</span>
+              <span class="px-3 py-1 bg-black text-white text-sm rounded-full">Animations</span>
+            </div>
+            <a
+              href="https://creative-dev-gsap-harry-potter-c88u.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-black font-semibold hover:underline"
+              >Voir le projet →</a
+            >
+          </div>
+        </div>
+
+        <div class="bg-[#D9D9D9] rounded-xl p-6 flex flex-col">
+          <a
+            href="https://iim-creative-technology.github.io/JS-A2-la-Team-Croquette-pokedex/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block mb-4"
+          >
+            <img
+              src="assets/images/projects/pokescreen.PNG"
+              alt="Capture d'écran du projet Pokédex"
+              class="w-full h-48 object-cover rounded-xl"
+            />
+          </a>
+          <div class="flex-1 flex flex-col">
+            <h3 class="text-xl font-bold mb-3 text-black">Pokédex</h3>
+            <div class="flex-1">
+              <p class="text-black mb-4 read-more-text" id="pokedex-description">
+                Application Pokédex complète permettant de rechercher et
+                consulter les informations détaillées sur tous les Pokémon.
+                Projet collaboratif avec une interface intuitive.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="px-3 py-1 bg-black text-white text-sm rounded-full">JavaScript</span>
+              <span class="px-3 py-1 bg-black text-white text-sm rounded-full">HTML/CSS</span>
+              <span class="px-3 py-1 bg-black text-white text-sm rounded-full">PokéAPI</span>
+            </div>
+            <a
+              href="https://iim-creative-technology.github.io/JS-A2-la-Team-Croquette-pokedex/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-black font-semibold hover:underline"
+              >Voir le projet →</a
             >
           </div>
         </div>
@@ -385,271 +317,25 @@
       </div>
     </div>
 
-    <!-- Section Projets remaniée -->
-    <section
-      id="projectContainer"
-      class="flex flex-col items-center bg-[#FDC93E] py-20 px-8"
-    >
-      <h2 class="text-black text-4xl font-bold mb-12">Projets</h2>
-
-      <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl w-full"
-      >
-        <div class="bg-[#D9D9D9] rounded-xl p-6 flex flex-col">
-          <a
-            href="https://sparring-companion.netlify.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="block mb-4"
-          >
-            <img
-              src="assets/images/projects/combined_screens.png"
-              alt="Capture d'écran du projet Sparring Companion"
-              class="w-full h-48 object-cover rounded-xl"
-            />
-          </a>
-          <div class="flex-1 flex flex-col">
-            <h3 class="text-xl font-bold mb-3 text-black">
-              Sparring Companion
-            </h3>
-            <div class="flex-1">
-              <p
-                class="text-black mb-4 read-more-text"
-                id="sparring-description"
-              >
-                Application mobile d'accompagnement pour les pratiquants d'arts
-                martiaux. Compagnon de développement autonome proposant un
-                journal de sparring intelligent, un tableau de bord personnalisé
-                et des outils de réflexion guidée basés sur la métacognition.
-              </p>
-              <button
-                class="read-more-btn text-sm mb-4"
-                onclick="toggleReadMore('sparring-description', this)"
-              >
-                Lire plus
-              </button>
-            </div>
-            <div class="flex flex-wrap gap-2 mb-3">
-              <span class="px-3 py-1 bg-black text-white text-sm rounded-full"
-                >React Native</span
-              >
-              <span class="px-3 py-1 bg-black text-white text-sm rounded-full"
-                >Supabase</span
-              >
-              <span class="px-3 py-1 bg-black text-white text-sm rounded-full"
-                >Expo</span
-              >
-            </div>
-            <a
-              href="https://sparring-companion.netlify.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-black font-semibold hover:underline"
-              >Voir le projet →</a
-            >
-          </div>
-        </div>
-
-        <!-- Projet 1 -->
-        <div class="bg-[#D9D9D9] rounded-xl p-6 flex flex-col">
-          <a
-            href="https://spallian-pokeapi.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="block mb-4"
-          >
-            <img
-              src="assets/images/projects/PokeQuizz.png"
-              alt="Capture d'écran du projet PokeQuizz"
-              class="w-full h-48 object-cover rounded-xl"
-            />
-          </a>
-          <div class="flex-1 flex flex-col">
-            <h3 class="text-xl font-bold mb-3 text-black">PokeQuizz</h3>
-            <div class="flex-1">
-              <p
-                class="text-black mb-4 read-more-text"
-                id="pokequizz-description"
-              >
-                Application de quiz interactive basée sur l'univers Pokémon.
-                Testez vos connaissances avec des questions dynamiques
-                alimentées par l'API PokéAPI.
-              </p>
-
-            </div>
-            <div class="flex flex-wrap gap-2 mb-3">
-              <span class="px-3 py-1 bg-black text-white text-sm rounded-full"
-                >React Native</span
-              >
-              <span class="px-3 py-1 bg-black text-white text-sm rounded-full"
-                >TypeScript</span
-              >
-              <span class="px-3 py-1 bg-black text-white text-sm rounded-full"
-                >API</span
-              >
-            </div>
-            <a
-              href="https://spallian-pokeapi.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-black font-semibold hover:underline"
-              >Voir le projet →</a
-            >
-          </div>
-        </div>
-
-        <!-- Projet 2 -->
-        <div class="bg-[#D9D9D9] rounded-xl p-6 flex flex-col">
-          <a
-            href="https://creative-dev-gsap-harry-potter-c88u.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="block mb-4"
-          >
-            <img
-              src="assets/images/projects/harry_potter_quizz.png"
-              alt="Capture d'écran du projet Harry Potter Quiz"
-              class="w-full h-48 object-cover rounded-xl"
-            />
-          </a>
-          <div class="flex-1 flex flex-col">
-            <h3 class="text-xl font-bold mb-3 text-black">Harry Potter Quiz</h3>
-            <div class="flex-1">
-              <p
-                class="text-black mb-4 read-more-text"
-                id="harrypotter-description"
-              >
-                Quiz immersif sur l'univers d'Harry Potter avec des animations
-                GSAP. Une expérience interactive et visuellement captivante pour
-                les fans de la saga.
-              </p>
-            </div>
-            <div class="flex flex-wrap gap-2 mb-3">
-              <span class="px-3 py-1 bg-black text-white text-sm rounded-full"
-                >GSAP</span
-              >
-              <span class="px-3 py-1 bg-black text-white text-sm rounded-full"
-                >JavaScript</span
-              >
-              <span class="px-3 py-1 bg-black text-white text-sm rounded-full"
-                >Animations</span
-              >
-            </div>
-            <a
-              href="https://creative-dev-gsap-harry-potter-c88u.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-black font-semibold hover:underline"
-              >Voir le projet →</a
-            >
-          </div>
-        </div>
-
-        <!-- Projet 3 -->
-        <div class="bg-[#D9D9D9] rounded-xl p-6 flex flex-col">
-          <a
-            href="https://iim-creative-technology.github.io/JS-A2-la-Team-Croquette-pokedex/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="block mb-4"
-          >
-            <img
-              src="assets/images/projects/pokescreen.PNG"
-              alt="Capture d'écran du projet Pokédex"
-              class="w-full h-48 object-cover rounded-xl"
-            />
-          </a>
-          <div class="flex-1 flex flex-col">
-            <h3 class="text-xl font-bold mb-3 text-black">Pokédex</h3>
-            <div class="flex-1">
-              <p
-                class="text-black mb-4 read-more-text"
-                id="pokedex-description"
-              >
-                Application Pokédex complète permettant de rechercher et
-                consulter les informations détaillées sur tous les Pokémon.
-                Projet collaboratif avec une interface intuitive.
-              </p>
-            </div>
-            <div class="flex flex-wrap gap-2 mb-3">
-              <span class="px-3 py-1 bg-black text-white text-sm rounded-full"
-                >JavaScript</span
-              >
-              <span class="px-3 py-1 bg-black text-white text-sm rounded-full"
-                >HTML/CSS</span
-              >
-              <span class="px-3 py-1 bg-black text-white text-sm rounded-full"
-                >PokéAPI</span
-              >
-            </div>
-            <a
-              href="https://iim-creative-technology.github.io/JS-A2-la-Team-Croquette-pokedex/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-black font-semibold hover:underline"
-              >Voir le projet →</a
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Animated Steps Separator -->
-    <div class="steps-container w-full overflow-hidden" aria-hidden="true">
-      <div class="steps-wrapper flex">
-        <img
-          src="assets/separators/steps/step-1.svg"
-          alt=""
-          class="steps-img"
-        />
-        <img
-          src="assets/separators/steps/step-2.svg"
-          alt=""
-          class="steps-img"
-        />
-        <img
-          src="assets/separators/steps/step-3.svg"
-          alt=""
-          class="steps-img"
-        />
-        <!-- Répétition pour continuité -->
-        <img
-          src="assets/separators/steps/step-1.svg"
-          alt=""
-          class="steps-img"
-        />
-        <img
-          src="assets/separators/steps/step-2.svg"
-          alt=""
-          class="steps-img"
-        />
-        <img
-          src="assets/separators/steps/step-3.svg"
-          alt=""
-          class="steps-img"
-        />
-      </div>
-    </div>
-
     <!-- Section Contact -->
     <section
       id="contactContainer"
-      class="flex flex-col items-center text-center bg-[#C00] py-20 px-8"
+      class="flex flex-col items-center text-center bg-[#FDC93E] py-20 px-8"
     >
       <div class="max-w-4xl w-full">
-        <p class="text-white text-4xl font-bold my-12">Contact</p>
+        <p class="text-black text-4xl font-bold my-12">Contact</p>
 
         <!-- Coordonnées -->
         <div class="mb-12">
           <a
             href="mailto:ryan.bardat.123@gmail.com"
-            class="text-white text-lg mb-4 hover:text-[#00BCC8] transition-colors duration-300 block"
+            class="text-black text-lg mb-4 hover:text-[#1f0043] transition-colors duration-300 block"
           >
             ryan.bardat.123@gmail.com
           </a>
           <a
             href="tel:+33625996364"
-            class="text-white text-lg mb-8 hover:text-[#00BCC8] transition-colors duration-300 block"
+            class="text-black text-lg mb-8 hover:text-[#1f0043] transition-colors duration-300 block"
           >
             06 25 99 63 64
           </a>
@@ -686,12 +372,25 @@
         <a
           href="assets/CV_Ryan_Bardat.pdf"
           download
-          class="inline-block px-8 py-3 bg-white text-[#C00] font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"
+          class="inline-block px-8 py-3 bg-black text-white font-semibold rounded-lg hover:bg-[#1f0043] transition-colors duration-300"
         >
           Télécharger mon CV
         </a>
       </div>
     </section>
+
+    <!-- Animated Steps Separator -->
+    <div class="steps-container w-full overflow-hidden" aria-hidden="true">
+      <div class="steps-wrapper flex">
+        <img src="assets/separators/steps/step-1.svg" alt="" class="steps-img" />
+        <img src="assets/separators/steps/step-2.svg" alt="" class="steps-img" />
+        <img src="assets/separators/steps/step-3.svg" alt="" class="steps-img" />
+        <!-- Répétition pour continuité -->
+        <img src="assets/separators/steps/step-1.svg" alt="" class="steps-img" />
+        <img src="assets/separators/steps/step-2.svg" alt="" class="steps-img" />
+        <img src="assets/separators/steps/step-3.svg" alt="" class="steps-img" />
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
